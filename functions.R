@@ -23,14 +23,14 @@ euclidean(23141234, 13892347912)
 
 
 # assignment 2
-# This function have gotten 
+# This function have gotten  pseudocode
 # Code inspiration from https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm 
 
 
 
 dijkstra <- function(graph, init_node){
   # checking the input
-  stopifnot(is.data.frame(graph) && colnames(graph) %in% c('v1','v2','w'),
+  stopifnot(is.data.frame(graph), colnames(graph) %in% c('v1','v2','w'),
             is.numeric(init_node) && length(init_node) == 1,
             init_node %in% graph$v1 ||init_node %in% graph$v2 )
   
@@ -42,16 +42,17 @@ dijkstra <- function(graph, init_node){
   
   Q <- nodes # Creating variable Q
   
-  while (length(Q) > 0) { # While the Q variable is longer than 0
-    u <- Q[which.min(dist)] # Takes the node with the shortest distance
+  while(length(Q) > 0) { # While the Q variable is longer than 0
+    u <- Q[which.min(dist[Q])] # Takes the node with the shortest distance
+  
     Q <- setdiff(Q,u) # Remove that node from Q
     
-      # Indice all elements 
+      # Indice all elements in v1 for the rows in v1 that are the value of u
    neighbors <- c(graph$v2[graph$v1 == u])
    
    for (v in neighbors){ # looping over all neighbors
        # Distance u + distance for all neighbors of u and v
-      alt <-  dist[u] + graph$w[which((graph$v1 == u & graph$v2 == v) )]
+      alt <-  dist[u] + graph$w[which((graph$v1 == u & graph$v2 == v ))]
       if (alt < dist[v]){ # updating the distance if its shorter than to the previous neighbor
         dist[v] <- alt
         prev[v] <- u
@@ -61,7 +62,6 @@ dijkstra <- function(graph, init_node){
    }
   return(dist)   
 }
-  
 
 wiki_graph <-
   data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
@@ -73,5 +73,6 @@ dijkstra(wiki_graph, 1)
 
 dijkstra(wiki_graph, 3)
 
+dijkstra(wiki_graph, 6)
 
 
