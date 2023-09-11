@@ -22,7 +22,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        r-version: ['4.0.4', '3.6.3']
+        r-version: [>= '3.6.3']
     env: 
        working-directory: ./Package.labb3
     steps:
