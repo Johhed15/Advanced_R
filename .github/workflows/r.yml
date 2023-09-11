@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         r-version: ['4.0.4', '3.6.3']
-
+  env: ./Package.labb3
     steps:
       - uses: actions/checkout@v3
       - name: Set up R ${{ matrix.r-version }}
@@ -34,6 +34,7 @@ jobs:
         run: |
           install.packages(c("remotes", "rcmdcheck"))
           remotes::install_deps(dependencies = TRUE)
+        working-directory: ${{env.working-directory}}
         shell: Rscript {0}
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
