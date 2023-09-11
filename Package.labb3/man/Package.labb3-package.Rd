@@ -6,7 +6,7 @@
 \alias{Package.labb3-package}
 \title{Package.labb3: Euclidian and dijkstra algorithms}
 \description{
-The packagde has 2 functions, one is an algorithm that calculates the greatest common devider(euclidien algorithm) for two scalars x and y. The other function does an dijkstra algorithm to calculate the shortest distance between a start node and every other node in a given graph. This function takes an data frame with 3 columns named 'v1','v2' and 'w' and a start node(init_node) and returns a vector with the distances.
+The package has 2 functions, one is an algorithm that calculates the greatest common divider(euclidan algorithm) for two scalars x and y. The other function does a dijkstra algorithm to calculate the shortest distance between a start node and every other node in a given graph. This function takes a data frame with 3 columns named 'v1','v2' and 'w' and a start node(init_node) and returns a vector with the distances.
 }
 \author{
 \strong{Maintainer}: Johannes Hedström \email{johed883@student.liu.se}
