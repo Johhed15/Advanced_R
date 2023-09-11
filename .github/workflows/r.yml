@@ -10,9 +10,9 @@ name: R
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Package.labb3" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Package.labb3" ]
 
 permissions:
   contents: read
