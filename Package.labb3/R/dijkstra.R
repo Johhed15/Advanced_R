@@ -1,3 +1,20 @@
+#' 
+#' @title Dijkstras algorithm 
+#' 
+#' @name Dijkstra
+#' 
+#' @description 
+#' Find the shortest path between nodes in a weighted graph.
+#' The algorithm itself and pseudo-code is from
+#' https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm.
+#' 
+#' @param graph A data.frame containing three variables v1, v2, and w that contains 
+#'  the edges of the graph (from v1 to v2) with the weight of the edge (w).
+#' 
+#' @param init_node A numeric scalar that exists in the graphs (alas in the v1, v2).
+#' 
+#' @returns A vector consisting of the closest path to each graph from the initial node
+
 dijkstra <-
 function(graph, init_node){
   # checking the input

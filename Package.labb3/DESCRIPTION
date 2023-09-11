@@ -3,8 +3,8 @@ Type: Package
 Title: Euclidian and dijkstra algorithms
 Version: 1.0.0
 Date: 2023-09-11
-Author@R: c(person('Johannes', 'Hedström',emil = 'johed883@student.liu.se', role = c('aut', 'cre')),
-		  person('Mikael', 'Montén', email = 'mikmo937@student.liu.se', role = c('aut','cre')))
+Author@R: person("Johannes", "Hedström",email = "johed883@student.liu.se", role = c("aut", "cre")),
+		  person("Mikael", "Montén", email = "mikmo937@student.liu.se", role = c("aut","cre"))
 Description: The packagde has 2 functions, one is an algorithm that calculates the greatest common devider(euclidien algorithm) for two scalars x and y. 
 		The other function does an dijkstra algorithm to calculate the shortest distance between a start node and every other node in a given graph. 
 		This function takes an data frame with 3 columns named 'v1','v2' and 'w' and a start node(init_node) and returns a vector with the distances. 

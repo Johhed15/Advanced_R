@@ -1,3 +1,20 @@
+
+#' 
+#' @title Euclidean algorithm 
+#' 
+#' @name Euclidean
+#' 
+#' @description 
+#' Euclidean algorithm which finds the greatest common divisor between two numeric 
+#' scalars or integers. https://en.wikipedia.org/wiki/Euclidean_algorithm 
+#'
+#'@param x  numeric scalar or integer 
+#'
+#'@param y  numeric scalar or integer 
+#'
+#'@return The Greatest common divisor of x and y
+#'
+
 euclidean <-
 function(x,y){
   # checking the input 
