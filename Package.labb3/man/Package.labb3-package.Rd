@@ -8,8 +8,20 @@
 \description{
 The package has 2 functions, one is an algorithm that calculates the greatest common divider(euclidan algorithm) for two scalars x and y. The other function does a dijkstra algorithm to calculate the shortest distance between a start node and every other node in a given graph. This function takes a data frame with 3 columns named 'v1','v2' and 'w' and a start node(init_node) and returns a vector with the distances.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Johhed15/Advanced_R}
+}
+
+}
 \author{
 \strong{Maintainer}: Johannes Hedström \email{johed883@student.liu.se}
+
+Authors:
+\itemize{
+  \item Mikael Montén \email{mikmo937@student.liu.se}
+}
 
 }
 \keyword{internal}
