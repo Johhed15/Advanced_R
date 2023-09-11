@@ -2,7 +2,7 @@
 \alias{Package.labb3-package}
 \alias{Package.labb3}
 \docType{package}
-\title{
+\title{'pakg'
 \packageTitle{Package.labb3}
 }
 \description{
