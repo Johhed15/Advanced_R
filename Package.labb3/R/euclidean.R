@@ -14,6 +14,7 @@
 #'
 #'@return The Greatest common divisor of x and y
 #'
+#'@export
 
 euclidean <-
 function(x,y){

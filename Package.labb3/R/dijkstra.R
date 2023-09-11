@@ -14,6 +14,8 @@
 #' @param init_node A numeric scalar that exists in the graphs (alas in the v1, v2).
 #' 
 #' @returns A vector consisting of the closest path to each graph from the initial node
+#' 
+#' @export
 
 dijkstra <-
 function(graph, init_node){
