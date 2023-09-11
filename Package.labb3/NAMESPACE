@@ -1,1 +1,1 @@
-export("dijkstra", "wiki_graph")
+export("dijkstra", "euclidean")
