@@ -7,15 +7,22 @@ euclidean <- function(x,y){
   # checking the input 
   stopifnot(is.integer(x) || is.numeric(x) && length(x) == 1 ,is.integer(y) || is.numeric(y) && length(y) == 1)
   
-  while (y != 0) { # While y differ from 0
-    t  <- y
-    y <- x %% y  # X modulus y
-    x <- t
+  # Checking which is bigger or smallest
+  big <- max(x,y)
+  small <- min(x,y)
+  
+  while (big != 0) { # While the biggest value differ from 0
+    t  <- big
+    big <- small %% big  # small modulus big
+    small <- t # When the small %% big == 0 the latest 'big value' is the GCD
   }
-  return(abs(x)) # returning x which now is the GCD
+  return(abs(small)) # returning the absolute value of the  GCD
 }
 
 
+euclidean(123612, 13892347912)
+
+euclidean(100, 1000)
 
 
 # assignment 2
@@ -30,13 +37,11 @@ dijkstra <- function(graph, init_node){
             is.numeric(init_node) && length(init_node) == 1,
             init_node %in% graph$v1 ||init_node %in% graph$v2 )
   
-  nodes <- unique(graph$v1) # taking out each node
-  dist <- rep(Inf,  length(nodes)) # Creating the dist and prev vectors
-  prev <- rep(NA,  length(nodes))
+  Q <- unique(graph$v1) # Creating variable Q(each node)
+   
+  dist <- rep(Inf,  length(Q)) # Creating the dist and prev vectors
   
   dist[init_node] <- 0 # The distance to itself is 0
-  
-  Q <- nodes # Creating variable Q
   
   while(length(Q) > 0) { # While the Q variable is longer than 0
     u <- Q[which.min(dist[Q])] # Takes the node with the shortest distance
@@ -51,7 +56,7 @@ dijkstra <- function(graph, init_node){
       alt <-  dist[u] + graph$w[which((graph$v1 == u & graph$v2 == v ))]
       if (alt < dist[v]){ # updating the distance if its shorter than to the previous neighbor
         dist[v] <- alt
-        prev[v] <- u
+        
       }
      }
     

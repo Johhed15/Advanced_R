@@ -21,10 +21,14 @@ function(x,y){
   # checking the input 
   stopifnot(is.integer(x) || is.numeric(x) && length(x) == 1 ,is.integer(y) || is.numeric(y) && length(y) == 1)
   
-  while (y != 0) { # While y differ from 0
-    t  <- y
-    y <- x %% y  # X modulus y
-    x <- t
+  # Checking which is bigger or smallest
+  big <- max(x,y)
+  small <- min(x,y)
+  
+  while (big != 0) { # While the biggest value differ from 0
+    t  <- big
+    big <- small %% big  # small modulus big
+    small <- t # When the small %% big == 0 the latest 'big value' is the GCD
   }
-  return(abs(x)) # returning x which now is the GCD
+  return(abs(small)) # returning the absolute value of the  GCD
 }
