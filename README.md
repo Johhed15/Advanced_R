@@ -5,6 +5,6 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/Johhed15/Advanced_R/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Johhed15/Advanced_R/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/Johhed15/Advanced_R/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Johhed15/Advanced_R/actions/workflows/R-CMD-check.yml)
 <!-- badges: end -->
 
