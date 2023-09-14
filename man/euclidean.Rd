@@ -4,6 +4,9 @@
 \alias{Euclidean}
 \alias{euclidean}
 \title{Euclidean algorithm}
+\source{
+\url{https://en.wikipedia.org/wiki/Euclidean_algorithm}
+}
 \usage{
 euclidean(x, y)
 }

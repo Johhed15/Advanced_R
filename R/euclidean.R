@@ -15,6 +15,8 @@
 #'@return The Greatest common divisor of x and y
 #'
 #'@export
+#'
+#'@source <https://en.wikipedia.org/wiki/Euclidean_algorithm>
 
 euclidean <-
 function(x,y){

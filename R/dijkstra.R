@@ -16,6 +16,8 @@
 #' @returns A vector consisting of the closest path to each graph from the initial node
 #' 
 #' @export
+#' 
+#' @source <https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm>
 
 dijkstra <-
 function(graph, init_node){
